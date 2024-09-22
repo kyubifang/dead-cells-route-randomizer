@@ -7,7 +7,7 @@ While the data provided is based on the final v3.5 update, there may be inaccura
 Note: This program assumes you have all the necessary keys, runes, and upgrades to reach each area. Please consult the legend at https://deadcells.wiki.gg/wiki/Biomes_map to determine what upgrades or paths must be used to unlock all of the biomes.
 
 TO USE:
-  
+  First ensure that you have [Java](https://www.java.com/download/ie_manual.jsp) installed on your computer.
   - Extract all files to a folder on your computer and run the .exe.
   - Select how many boss stem cells you will be playing with.
     - If you selected 5 BSC, select if you wish to finish the game fighting the True Final Boss.
