@@ -1,10 +1,11 @@
+// by kyubifang - https://github.com/kyubifang/dead-cells-route-randomizer
+
 import java.util.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
-
 import javax.imageio.ImageIO;
 import javax.swing.BorderFactory;
 import javax.swing.ButtonGroup;
@@ -39,12 +40,6 @@ public class DCRouteRandomizer extends JFrame
     public static Font DosisFont;
     public static Font NovaFont;
     public static Font castleFont;
-
-    final static boolean shouldFill = true;
-
-    static final Paint gradient = null;
-
-    boolean generated = false;
     
     GridBagConstraints gbc = new GridBagConstraints();
     GridBagConstraints gbm = new GridBagConstraints();
@@ -57,8 +52,6 @@ public class DCRouteRandomizer extends JFrame
     public static Color jacaranda_pink = new Color(190, 98, 255); // queen color
     public static Color lower_lip = new Color(244, 66, 145); // castlevania color
     public static Color red_handed = new Color(220, 33, 50); // boss battle color
-    public static Color gingerline = new Color(255, 224, 17);
-    public static Color manticore_wing = new Color(213, 126, 14);
     public static Color midnight_express = new Color(27, 41, 57); // map image background
     public static Color cool_balaclavas_are_forever = new Color(20, 29, 60); // base background
     public static Color queen_of_trees = new Color(20, 60, 25); // tbs background
@@ -66,10 +59,10 @@ public class DCRouteRandomizer extends JFrame
     public static Color blackcurrant = new Color(42, 18, 58); // queen background
     public static Color chilli_black_red = new Color(80, 22, 47); // castlevania background
     public static Color rustic_red = new Color(60, 20, 27); // bs5 background
-    public static Color sanskrit = new Color(234, 150, 47);
     public static Color assassin_red = new Color(247, 6, 11); // brutality
     public static Color telemagenta = new Color(173, 53, 208); // tactics
     public static Color booger_buster = new Color(0, 255, 113); // survival
+    public static Color sanskrit = new Color(234, 150, 47); // orange gradient
     public static Color cadmium_yellow = new Color(255, 246, 0); //yellow gradient
 
     // define borders
@@ -138,8 +131,7 @@ public class DCRouteRandomizer extends JFrame
     //constructor method
     public DCRouteRandomizer()
     {
-        
-        setTitle("Dead Cells Route Generator - by kyubifang");
+        setTitle("Dead Cells Route Generator");
         setSize(WIDTH, HEIGHT);
 
         //set background
@@ -178,12 +170,6 @@ public class DCRouteRandomizer extends JFrame
         DLCLabel = new JLabel("Owned DLC:");
         finalBossLabel = new JLabel("Fight True Final Boss this run?");
         classLabel = new JLabel("Choose random stat?");
-        blank1 = new JLabel(" ");
-        blank2 = new JLabel(" ");
-        blank3 = new JLabel(" ");
-        blank4 = new JLabel(" ");
-        blank5 = new JLabel(" ");
-        blank6 = new JLabel(" ");
 
         stage0 = new JLabel("Prisoners' Quarters");
         stage0.setBorder(baseBorder);
@@ -259,6 +245,12 @@ public class DCRouteRandomizer extends JFrame
         classPicked = new JLabel();
 
         // blank labels for organization
+        blank1 = new JLabel(" ");
+        blank2 = new JLabel(" ");
+        blank3 = new JLabel(" ");
+        blank4 = new JLabel(" ");
+        blank5 = new JLabel(" ");
+        blank6 = new JLabel(" ");
         b1 = new JLabel();
         b2 = new JLabel();
         b3 = new JLabel();
@@ -888,7 +880,6 @@ public class DCRouteRandomizer extends JFrame
                 randomButton.setEnabled(true);
             }
         });
-
     } // end constructor
 
     // method to center the frame on the screen
@@ -906,7 +897,6 @@ public class DCRouteRandomizer extends JFrame
 
         // method to center frame on user's screen
         setBounds(xPositionOfFrame, yPositionOfFrame, frameWidth, frameHeight);
-         
     } // end centerFrame
 
     // method to calculate paths
@@ -1153,11 +1143,7 @@ public class DCRouteRandomizer extends JFrame
         {
             switch (rng.nextInt(4))
             {
-                // 0 = go dilapidated
-                // 1 = go promenade
-                // 2 = go toxic
-                // 3 = go outskirt
-                case 0:
+                case 0: // go dilapidated
                     path[1] = DA;
                     rewards[5] += 10;
                     if (cell > 0)
@@ -1181,7 +1167,7 @@ public class DCRouteRandomizer extends JFrame
                             break;
                     }
                     break;
-                case 1:
+                case 1: // go promenade
                     path[1] = PotC;
                     rewards[5] += 10;
                     if (cell > 0)
@@ -1205,7 +1191,7 @@ public class DCRouteRandomizer extends JFrame
                             break;
                     }
                     break;
-                case 2:
+                case 2: // go toxic
                     path[1] = TS;
                     rewards[5] += 10;
                     if (cell > 0)
@@ -1230,7 +1216,7 @@ public class DCRouteRandomizer extends JFrame
                             break;
                     }
                     break;
-                case 3:
+                case 3: // go outskirt
                     path[1] = CO;
                     rewards[5] += 10;
                     if (cell > 0)
@@ -1259,10 +1245,7 @@ public class DCRouteRandomizer extends JFrame
         {
             switch (rng.nextInt(3))
             {
-                // 0 = go dilapidated
-                // 1 = go promenade
-                // 2 = go toxic
-                case 0:
+                case 0: // go dilapidated
                     path[1] = DA;
                     rewards[5] += 10;
                     if (cell > 0)
@@ -1286,7 +1269,7 @@ public class DCRouteRandomizer extends JFrame
                             break;
                     }
                     break;
-                case 1:
+                case 1: // go promenade
                     path[1] = PotC;
                     rewards[5] += 10;
                     if (cell > 0)
@@ -1310,7 +1293,7 @@ public class DCRouteRandomizer extends JFrame
                             break;
                     }
                     break;
-                case 2:
+                case 2: // go toxic
                     path[1] = TS;
                     rewards[5] += 10;
                     if (cell > 0)
@@ -1342,10 +1325,7 @@ public class DCRouteRandomizer extends JFrame
         {
             switch (rng.nextInt(3))
             {
-                // 0 = go promenade
-                // 1 = go toxic
-                // 2 = go outskirts
-                case 0:
+                case 0: // go promenade
                     path[1] = PotC;
                     rewards[5] += 10;
                     if (cell > 0)
@@ -1369,7 +1349,7 @@ public class DCRouteRandomizer extends JFrame
                             break;
                     }
                     break;
-                case 1:
+                case 1: // go toxic
                     path[1] = TS;
                     rewards[5] += 10;
                     if (cell > 0)
@@ -1394,7 +1374,7 @@ public class DCRouteRandomizer extends JFrame
                             break;
                     }
                     break;
-                case 2:
+                case 2: // go outskirts
                     path[1] = CO;
                     rewards[5] += 10;
                     if (cell > 0)
@@ -1423,9 +1403,7 @@ public class DCRouteRandomizer extends JFrame
         {
             switch (rng.nextInt(2))
             {
-                // 0 = go promenade
-                // 1 = go toxic
-                case 0:
+                case 0: // go promenade
                     path[1] = PotC;
                     stage1.setBackground(cool_balaclavas_are_forever);
                     stage1.setText("Promenade of the Condemned");
@@ -1456,7 +1434,7 @@ public class DCRouteRandomizer extends JFrame
                             break;
                     }
                     break;
-                case 1:
+                case 1: // go toxic
                     path[1] = TS;
                     stage1.setBackground(cool_balaclavas_are_forever);
                     stage1.setBorder(baseBorder);
@@ -1497,8 +1475,7 @@ public class DCRouteRandomizer extends JFrame
         {
             switch (rng.nextInt(2))
             {
-                // 0 = go prison depths
-                case 0:
+                case 0: // go prison depths
                     optional = true;
                     opt = 1;
                     path[2] = PD;
@@ -1513,8 +1490,7 @@ public class DCRouteRandomizer extends JFrame
         {
             switch (rng.nextInt(2))
             {
-                // 0 = go corrupted prison
-                case 0:
+                case 0: // go corrupted prison
                     optional = true;
                     opt = 2;
                     path[2] = CP;
@@ -1541,13 +1517,8 @@ public class DCRouteRandomizer extends JFrame
                 {
                     switch (rng.nextInt(3))
                     {
-                        // if 0 && TBS owned
-                        //      go morass
-                        // else
-                        //      1 = go ancient
-                        //      2 = go ossuary
-                        case 0:
-                            if (dlc1)
+                        case 0: // go morass IF TBS owned
+                            if (dlc1) 
                             {
                                 path[3] = MotB;
                                 if (cell > 1)
@@ -1572,7 +1543,7 @@ public class DCRouteRandomizer extends JFrame
                                 dlcCheck = true;
                             }
                             break;
-                        case 1:
+                        case 1: //  go ancient IF BSC 1 or higher
                             if (cell > 0)
                             {
                                 path[3] = AS;
@@ -1603,7 +1574,7 @@ public class DCRouteRandomizer extends JFrame
                                 dlcCheck = true;
                             }
                             break;
-                        case 2:
+                        case 2: // go ossuary
                             path[3] = Oss;
                             if (cell > 1)
                             {
@@ -1639,12 +1610,7 @@ public class DCRouteRandomizer extends JFrame
                 {
                     switch (rng.nextInt(3))
                     {
-                        // if 0 && castlevania owned
-                        //      go dracula castle (depth 3)
-                        // else
-                        //      1 = go ramparts
-                        //      2 = go ancient
-                        case 0:
+                        case 0: // go go dracula castle IF castlevania owned
                             if (dlc4)
                             {
                                 path[3] = DC3;
@@ -1673,30 +1639,33 @@ public class DCRouteRandomizer extends JFrame
                                 dlcCheck = true;
                             }
                             break;
-                        case 1:
-                            path[3] = R;
-                            if (cell > 1)
-                                rewards[0] += 1;
-                            rewards[0] += 3;
-                            rewards[1] += 2;
-                            rewards[3] += 2;
-                            rewards[5] += 10;
-                            switch (cell)
+                        case 1: // go ramparts IF BSC 1 or higher
+                            if (cell > 0)
                             {
-                                case 3:
-                                    rewards[2] += 1;
-                                    break;
-                                case 4:
-                                case 5:
-                                    rewards[2] += 2;
-                                    rewards[4] += 1;
-                                    break;
-                                default:
-                                    break;
+                                path[3] = R;
+                                if (cell > 1)
+                                    rewards[0] += 1;
+                                rewards[0] += 3;
+                                rewards[1] += 2;
+                                rewards[3] += 2;
+                                rewards[5] += 10;
+                                switch (cell)
+                                {
+                                    case 3:
+                                        rewards[2] += 1;
+                                        break;
+                                    case 4:
+                                    case 5:
+                                        rewards[2] += 2;
+                                        rewards[4] += 1;
+                                        break;
+                                    default:
+                                        break;
+                                }
+                                dlcCheck = true;
                             }
-                            dlcCheck = true;
                             break;
-                        case 2:
+                        case 2: // go ancient
                             if (cell > 0)
                             {
                                 path[3] = AS;
@@ -1739,7 +1708,7 @@ public class DCRouteRandomizer extends JFrame
             {
                 switch (rng.nextInt(2))
                 {
-                    case 0:
+                    case 0: // go morass
                         path[3] = MotB;
                         if (cell > 1)
                             rewards[0] += 1;
@@ -1761,7 +1730,7 @@ public class DCRouteRandomizer extends JFrame
                                 break;
                         }
                         break;
-                    case 1:
+                    case 1: // go ramparts
                         path[3] = R;
                         if (cell > 1)
                             rewards[0] += 1;
@@ -1791,7 +1760,7 @@ public class DCRouteRandomizer extends JFrame
                 {
                     switch (rng.nextInt(3))
                     {
-                        case 0:
+                        case 0: // go morass IF tbs owned
                             if (dlc1)
                             {
                                 path[3] = MotB;
@@ -1817,7 +1786,7 @@ public class DCRouteRandomizer extends JFrame
                                 dlcCheck = true;
                             }
                             break;
-                        case 1:
+                        case 1: // go ossuary
                             path[3] = Oss;
                             if (cell > 1)
                             {
@@ -1842,7 +1811,7 @@ public class DCRouteRandomizer extends JFrame
                             }
                             dlcCheck = true;
                             break;
-                        case 2:
+                        case 2: // go ramparts
                             path[3] = R;
                             if (cell > 1)
                                 rewards[0] += 1;
@@ -1875,7 +1844,7 @@ public class DCRouteRandomizer extends JFrame
                 {
                     switch (rng.nextInt(3))
                     {
-                        case 0:
+                        case 0: // go dracula's castle IF castlevania owned
                             if (dlc4)
                             {
                                 path[3] = DC3;
@@ -1904,7 +1873,7 @@ public class DCRouteRandomizer extends JFrame
                                 dlcCheck = true;
                             }
                             break;
-                        case 1:
+                        case 1: // go ramparts
                             path[3] = R;
                             if (cell > 1)
                                 rewards[0] += 1;
@@ -1927,7 +1896,7 @@ public class DCRouteRandomizer extends JFrame
                             }
                             dlcCheck = true;
                             break;
-                        case 2:
+                        case 2: // go ancient
                             path[3] = AS;
                             if (cell > 0)
                                 rewards[3] += 1;
@@ -1963,7 +1932,7 @@ public class DCRouteRandomizer extends JFrame
             {
                 switch (rng.nextInt(2))
                 {
-                    case 0:
+                    case 0: // go ossuary
                         path[3] = Oss;
                         if (cell > 1)
                         {
@@ -1987,7 +1956,7 @@ public class DCRouteRandomizer extends JFrame
                                 break;
                         }
                         break;
-                    case 1:
+                    case 1: // go dracula's castle
                         path[3] = DC3;
                         if (cell > 0)
                             rewards[3] += 1;
@@ -2034,11 +2003,7 @@ public class DCRouteRandomizer extends JFrame
             {
                 switch (rng.nextInt(2))
                 {
-                    // if 0 && castlevania owned
-                    //      go defiled (death fight)
-                    // else
-                    //      go bridge (concierge fight)
-                    case 0:
+                    case 0: // go defiled (death fight) IF castlevania owned
                         if (dlc4)
                         {
                             path[4] = DN;
@@ -2050,7 +2015,7 @@ public class DCRouteRandomizer extends JFrame
                         }
                         
                         break;
-                    case 1:
+                    case 1: // go bridge (concierge fight)
                         path[4] = BB;
                         if (cell > 2)
                             rewards[2] += 2;
@@ -2124,12 +2089,7 @@ public class DCRouteRandomizer extends JFrame
             {
                 switch (rng.nextInt(3))
                 {
-                    // if 0 && fatal falls owned
-                    //      go shrines
-                    // else
-                    //      1 = go village
-                    //      2 = go graveyard
-                    case 0:
+                    case 0: // go shrines IF fatal falls owned
                         if (dlc2)
                         {
                             path[5] = FracShrine;
@@ -2156,7 +2116,7 @@ public class DCRouteRandomizer extends JFrame
                             dlcCheck = true;
                         }
                         break;
-                    case 1:
+                    case 1: // go village
                         path[5] = SV;
                         if (cell > 0)
                             rewards[3] += 1;
@@ -2183,7 +2143,7 @@ public class DCRouteRandomizer extends JFrame
                         }    
                         dlcCheck = true;
                         break;
-                    case 2:
+                    case 2: // go graveyard
                         path[5] = G;
                         if (cell > 2)
                         {
@@ -2209,12 +2169,7 @@ public class DCRouteRandomizer extends JFrame
             {
                 switch (rng.nextInt(3))
                 {
-                    // if 0 && fatal falls owned
-                    //      go shrines
-                    // else
-                    //      1 = go village
-                    //      2 = go sanctuary
-                    case 0:
+                    case 0: // go shrines IF fatal falls owned
                         if (dlc2)
                         {
                             path[5] = FracShrine;
@@ -2241,7 +2196,7 @@ public class DCRouteRandomizer extends JFrame
                             dlcCheck = true;
                         }
                         break;
-                    case 1:
+                    case 1: // go village
                         path[5] = SV;
                         if (cell > 0)
                             rewards[3] += 1;
@@ -2268,7 +2223,7 @@ public class DCRouteRandomizer extends JFrame
                         }    
                         dlcCheck = true;
                         break;
-                    case 2:
+                    case 2: // go sanctuary
                         path[5] = SS;
                         if (cell > 0)
                             rewards[3] += 1;
@@ -2303,7 +2258,7 @@ public class DCRouteRandomizer extends JFrame
         {
             // if 0, go sanctuary
             // else go graveyard
-                if (rng.nextInt(1) == 0)
+            if (rng.nextInt(1) == 0)
             {
                 
                 path[5] = SS;
@@ -2351,10 +2306,7 @@ public class DCRouteRandomizer extends JFrame
         {
             switch (rng.nextInt(3))
             {
-                // 0 = go village
-                // 1 = go sanctuary
-                // 2 = go graveyard
-                case 0:
+                case 0: // go village
                     path[5] = SV;
                     if (cell > 0)
                         rewards[3] += 1;
@@ -2380,7 +2332,7 @@ public class DCRouteRandomizer extends JFrame
                             break;
                     }    
                     break;
-                case 1:
+                case 1: // go sanctuary
                     path[5] = SS;
                     if (cell > 0)
                         rewards[3] += 1;
@@ -2405,7 +2357,7 @@ public class DCRouteRandomizer extends JFrame
                             break;
                     }  
                     break;
-                case 2:
+                case 2: // go graveyard
                     path[5] = G;
                     if (cell > 2)
                     {
@@ -2431,12 +2383,7 @@ public class DCRouteRandomizer extends JFrame
             {
                 switch (rng.nextInt(3))
                 {
-                    // if 0 && fatal falls owned
-                    //      go undying
-                    // else
-                    //      1 = go clock tower
-                    //      2 = go sepulcher
-                    case 0:
+                    case 0: // go shores IF fatal falls owned
                         if (dlc2)
                         {
                             path[6] = US;
@@ -2458,7 +2405,7 @@ public class DCRouteRandomizer extends JFrame
                             dlcCheck = true;
                         }
                         break;
-                    case 1:
+                    case 1: // go clock tower
                         path[6] = CT;
                         rewards[0] += 4;
                         rewards[1] += 2;
@@ -2479,7 +2426,7 @@ public class DCRouteRandomizer extends JFrame
                         }
                         dlcCheck = true;
                         break;
-                    case 2:
+                    case 2: // go sepulcher
                         path[6] = ForgSep;
                         if (cell > 2)
                         {
@@ -2588,12 +2535,7 @@ public class DCRouteRandomizer extends JFrame
             {
                 switch (rng.nextInt(3))
                 {
-                    // if 0 && fatal falls owned
-                    //      go undying
-                    // else
-                    //      1 = go sepulcher
-                    //      2 = go cavern
-                    case 0:
+                    case 0: // go shores IF fatal falls owned
                         if (dlc2)
                         {
                             path[6] = US;
@@ -2615,7 +2557,7 @@ public class DCRouteRandomizer extends JFrame
                             dlcCheck = true;
                         }
                         break;
-                    case 1:
+                    case 1: // go sepulcher
                         path[6] = ForgSep;
                         if (cell > 2)
                         {
@@ -2634,7 +2576,7 @@ public class DCRouteRandomizer extends JFrame
                         rewards[5] += 10;
                         dlcCheck = true;
                         break;
-                    case 2:
+                    case 2: // go cavern
                         path[6] = C;
                         if (cell > 0)
                             rewards[3]++;
