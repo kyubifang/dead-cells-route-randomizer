@@ -6,8 +6,12 @@ While the data provided is based on the final v3.5 update, there may be inaccura
 
 Note: This program assumes you have all the necessary keys, runes, and upgrades to reach each area. Please consult the legend at https://deadcells.wiki.gg/wiki/Biomes_map to determine what upgrades or paths must be used to unlock all of the biomes.
 
+BEFORE DOWNLOADING:
+  - First ensure that you have [Java](https://www.java.com/download/ie_manual.jsp) and [JDK 16.0.1+](https://www.oracle.com/java/technologies/downloads/) installed on your computer.
+  - It's highly advised to have a screen resolution of 1650 x 1050 at the minimum, scaled at 100%. (Will update code in the future to accomodate smaller resolutions and greater scalings)
+  - Windows Defender may flag it as suspicious. Unfortunately I'm unsure how to workaround this.
+
 TO USE:
-  First ensure that you have [Java](https://www.java.com/download/ie_manual.jsp) installed on your computer.
   - Extract all files to a folder on your computer and run the .exe.
   - Select how many boss stem cells you will be playing with.
     - If you selected 5 BSC, select if you wish to finish the game fighting the True Final Boss.
