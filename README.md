@@ -8,7 +8,7 @@ Note: This program assumes you have all the necessary keys, runes, and upgrades 
 
 TO USE:
   
-  - Run the program and select how many boss stem cells you will be playing with.
+  - Run the .jar program and select how many boss stem cells you will be playing with.
     - If you selected 5 BSC, select if you wish to finish the game fighting the True Final Boss.
       - Choosing "Yes" will only generate routes that take you to the true final boss, while "Maybe" may take you there or to a different final boss, such as the Queen or Dracula, assuming their respective DLCs are purchased, otherwise it will only end with the HOTK.
   - If you have no idea which stat you wish to play this run, click the random stat box. This will randomly choose between Brutality, Tactics, or Survival for your run.
