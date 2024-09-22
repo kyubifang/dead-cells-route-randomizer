@@ -1,4 +1,4 @@
-This is a Dead Cells Route Randomizer, heavily inspired by the online Route Calculator, https://dead-cells-route-calculator.web.app/. As the web version is quite out of date, this program attempts to serve as an alternative until further notice.
+This is a Dead Cells Route Randomizer, heavily inspired by the online Route Calculator, https://dead-cells-route-calculator.web.app/. As the web version appears to be a bit out of date, this program attempts to serve as an alternative until further notice.
 
 Please note that this is all based off the data provided by the Dead Cells Official Wiki, https://deadcells.wiki.gg/.
 
