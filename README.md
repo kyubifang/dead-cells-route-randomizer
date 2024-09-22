@@ -1,6 +1,9 @@
 This is a Dead Cells Route Randomizer, heavily inspired by the online Route Calculator, https://dead-cells-route-calculator.web.app/. As the web version is quite out of date, this program attempts to serve as an alternative until further notice.
+
 Please note that this is all based off the data provided by the Dead Cells Official Wiki, https://deadcells.wiki.gg/.
+
 While the data provided is based on the final v3.5 update, there may be inaccuracies present from v3.4 and future patches.
+
 Note: This program assumes you have all the necessary keys and upgrades to reach these areas. Please consult the legend at https://deadcells.wiki.gg/wiki/Biomes_map to determine what upgrades or paths must be used to unlock all of the biomes.
 
 TO USE:
