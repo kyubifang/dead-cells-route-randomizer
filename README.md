@@ -12,7 +12,7 @@ BEFORE DOWNLOADING:
   - Windows Defender may flag it as suspicious. Unfortunately I'm unsure how to workaround this.
 
 TO USE:
-  - Extract all files to a folder on your computer and run the .exe.
+  - Extract all files to a folder on your computer and run the .jar file.
   - Select how many boss stem cells you will be playing with.
     - If you selected 5 BSC, select if you wish to finish the game fighting the True Final Boss.
       - Choosing "Yes" will only generate routes that take you to the true final boss, while "Maybe" may take you there or to a different final boss, such as the Queen or Dracula, assuming their respective DLCs are purchased, otherwise it will only end with the HOTK.
