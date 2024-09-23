@@ -3093,14 +3093,14 @@ public class DCRouteRandomizer extends JFrame
         switch (path[7])
         {
             case "Mausoleum":
-                stage7.setBackground(queen_of_trees);
+                stage7.setBackground(pullman_green);
                 stage7.setText("Mausoleum");
-                stage7.setBorder(badSeedBorder);
+                stage7.setBorder(fallsBorder);
                 panel7.setIcon(mausoleumImg);
-                panel7.setBorder(badSeedBorder);
-                floor7.setBackground(queen_of_trees);
+                panel7.setBorder(fallsBorder);
+                floor7.setBackground(pullman_green);
                 floor7.setText("Scarecrow Boss Fight");
-                floor7.setBorder(badSeedBorder);
+                floor7.setBorder(fallsBorder);
                 break;
             case "Clock Room":
                 stage7.setBackground(cool_balaclavas_are_forever);
